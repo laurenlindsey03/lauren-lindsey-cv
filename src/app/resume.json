@@ -1,0 +1,44 @@
+{
+  "name": "Your name",
+  "tagline": "A tag line describing what you are interested in doing.",
+  "headshot": "images/headshot.jpg",
+  "contact": {
+    "address": "123 Main St, City, ST 00000",
+    "phone": "(123) 456-7890",
+    "email": "your.email@example.com",
+    "linkedin": "https://www.linkedin.com/in/yourprofile"
+  },
+  "education": {
+    "school": "University Name",
+    "gpa": "4.0",
+    "degree": "Bachelor of Science",
+    "graduation_date": "May 2025"
+  },
+  "honors_and_awards": [
+    { "honor": "Dean's List", "date": "2023" },
+    { "honor": "Scholarship Award", "date": "2022" }
+  ],
+  "skills": ["HTML", "Java", "JavaScript", "React"],
+  "leadership_and_experience": [
+    { "position": "Intern at Company", "date": "2023–Present", "link": "https://company.com" },
+    { "position": "Volunteer at Org", "date": "2022–2023" }
+  ],
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "image": "images/img_avatar.png",
+      "descr": ["Built with HTML/CSS", "Deployed on Netlify"]
+    },
+    {
+      "title": "Todo App",
+      "image": "images/img_avatar.png",
+      "descr": ["Built in React", "Used localStorage"]
+    },
+    {
+      "title": "Resume Builder",
+      "image": "images/img_avatar.png",
+      "descr": ["JSON to HTML conversion", "Practice with DOM"]
+    }
+  ]
+}
+

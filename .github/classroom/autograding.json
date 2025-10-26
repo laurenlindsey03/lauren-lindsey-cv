@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Part 1 – Home & lists",
+      "setup": "npm ci",
+      "run": "npm run test:part1 --silent",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 20,
+      "points": 30
+    },
+    {
+      "name": "Part 2 – Contact, Link, client route, next/image",
+      "setup": "",
+      "run": "npm run test:part2 --silent",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 20,
+      "points": 20
+    }
+  ]
+}
