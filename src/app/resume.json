@@ -1,44 +1,72 @@
 {
-  "name": "Your name",
-  "tagline": "A tag line describing what you are interested in doing.",
+  "name": "Lauren Lindsey",
+  "tagline": "A current Computer Science senior interested in IT Infrastructure and cybersecurity.",
   "headshot": "images/headshot.jpg",
   "contact": {
-    "address": "123 Main St, City, ST 00000",
-    "phone": "(123) 456-7890",
-    "email": "your.email@example.com",
+    "address": "55 Blue Springs Ln, Commerce, GA 30529",
+    "phone": "(912) 464-2004",
+    "email": "lrl64600@uga.edu",
     "linkedin": "https://www.linkedin.com/in/yourprofile"
   },
   "education": {
-    "school": "University Name",
-    "gpa": "4.0",
+    "school": "University of Georgia",
+    "gpa": "3.45",
     "degree": "Bachelor of Science",
-    "graduation_date": "May 2025"
+    "graduation_date": "May 2026"
   },
   "honors_and_awards": [
-    { "honor": "Dean's List", "date": "2023" },
-    { "honor": "Scholarship Award", "date": "2022" }
+    {
+      "honor": "Dean's List",
+      "date": "2022-2024"
+    },
+    {
+      "honor": "Coca-Cola Character Counts Scholarship Award",
+      "date": "2022"
+    }
   ],
-  "skills": ["HTML", "Java", "JavaScript", "React"],
+  "skills": [
+    "HTML",
+    "Java",
+    "C",
+    "C#",
+    "Powershell",
+    "Python"
+  ],
   "leadership_and_experience": [
-    { "position": "Intern at Company", "date": "2023–Present", "link": "https://company.com" },
-    { "position": "Volunteer at Org", "date": "2022–2023" }
+    {
+      "position": "IT Infrastructure Intern at Textron Inc.",
+      "date": "Summer 2025",
+      "link": "https://textron.com"
+    },
+    {
+      "position": "Lifeguard at The University of Georgia",
+      "date": "2023-Present"
+    }
   ],
   "projects": [
     {
-      "title": "Portfolio Website",
-      "image": "images/img_avatar.png",
-      "descr": ["Built with HTML/CSS", "Deployed on Netlify"]
+      "title": "SocFlow",
+      "image": "images/image2.jpeg",
+      "descr": [
+        "Built with C#, Mud Blazer, and Azure",
+        "Uses AI to automate SOC Reports"
+      ]
     },
     {
-      "title": "Todo App",
-      "image": "images/img_avatar.png",
-      "descr": ["Built in React", "Used localStorage"]
+      "title": "Gallery App",
+      "image": "images/GalleryApp.jpg",
+      "descr": [
+        "Built using JavaFX",
+        "Used iTunes Search API"
+      ]
     },
     {
-      "title": "Resume Builder",
-      "image": "images/img_avatar.png",
-      "descr": ["JSON to HTML conversion", "Practice with DOM"]
+      "title": "Meal Nutrition App",
+      "image": "images/MealNutritionApp.jpg",
+      "descr": [
+        "Built using JavaFX",
+        "Used an API to find recipes with the searched ingredient and another to find the nutritional information"
+      ]
     }
   ]
 }
-

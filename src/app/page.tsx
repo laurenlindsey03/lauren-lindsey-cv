@@ -1,5 +1,5 @@
 import resumeData from "./resume.json";
-import type { Resume } from "@/types/resume";
+import type { Resume } from "../../types/resume";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Section from "./components/Section";
@@ -17,28 +17,31 @@ export default function Home() {
 
   return (
     <main>
-      <Nav />
-      <Header/>
-       <Section >
+      <Nav name={name} context="home" />
+      <Header />
+
+      <Section title="Education">
         <EducationList />
       </Section>
 
-      <Section >
+      <Section title="Honors">
         <Honors />
       </Section>
 
-      <Section >
-        <Skills  />
+      <Section title="Skills">
+        <Skills />
       </Section>
 
-      <Section >
+      <Section title="Leadership and Experience">
         <Experience />
       </Section>
 
-       <Section >
+      <Section title="Projects">
         <Projects />
       </Section>
+
       <Footer />
     </main>
   );
 }
+
