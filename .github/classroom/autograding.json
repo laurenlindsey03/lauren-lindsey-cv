@@ -3,22 +3,23 @@
     {
       "name": "Part 1 – Home & lists",
       "setup": "npm ci",
-      "run": "npm run test:part1 --silent",
+      "run": "bash -lc 'npx jest __tests__/part1 --ci --runInBand > .grader_jest_out 2> .grader_jest_err; code=$?; cat .grader_jest_out .grader_jest_err | sed -r \"s/\\x1B\\[[0-9;]*[mK]//g\"; if [ $code -eq 0 ]; then echo \"__ALL_TESTS_PASSED__\"; fi; exit 0'",
       "input": "",
-      "output": "PASS",
+      "output": "__ALL_TESTS_PASSED__",
       "comparison": "included",
-      "timeout": 20,
+      "timeout": 90,
       "points": 30
     },
     {
       "name": "Part 2 – Contact, Link, client route, next/image",
       "setup": "",
-      "run": "npm run test:part2 --silent",
+      "run": "bash -lc 'npx jest __tests__/part2 --ci --runInBand > .grader_jest_out 2> .grader_jest_err; code=$?; cat .grader_jest_out .grader_jest_err | sed -r \"s/\\x1B\\[[0-9;]*[mK]//g\"; if [ $code -eq 0 ]; then echo \"__ALL_TESTS_PASSED__\"; fi; exit 0'",
       "input": "",
-      "output": "PASS",
+      "output": "__ALL_TESTS_PASSED__",
       "comparison": "included",
-      "timeout": 20,
+      "timeout": 90,
       "points": 20
     }
   ]
 }
+
