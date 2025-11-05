@@ -16,11 +16,17 @@ export default function Header(): JSX.Element {
         <h1>{resume.name}</h1>
         <p className="tagline">{resume.tagline}</p>
 
-        <address className="contact">
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          <span> • </span>
-          <a href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}>{contact.phone}</a>
-        </address>
+        <p className="contact-info">
+          <span className="contact-line-item">{contact.address}</span>
+          <span className="contact-sep"> • </span>
+          <span className="contact-line-item">
+            <a href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}>{contact.phone}</a>
+          </span>
+          <span className="contact-sep"> • </span>
+          <span className="contact-line-item">
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </span>
+        </p>
       </div>
     </header>
   );

@@ -5,8 +5,52 @@ body {
   padding: 0;
   font-family: 'Crimson Text', serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
   color: #000000;
+  background-color: #e8f0ff;
+  background-image: 
+    radial-gradient(circle at 100% 150%, #e8f0ff 24%, #cee5ff 25%, #cee5ff 28%, #e8f0ff 29%, #e8f0ff 36%, #cee5ff 36%, #cee5ff 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0 150%, #e8f0ff 24%, #cee5ff 25%, #cee5ff 28%, #e8f0ff 29%, #e8f0ff 36%, #cee5ff 36%, #cee5ff 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50% 100%, #cee5ff 10%, #e8f0ff 11%, #e8f0ff 23%, #cee5ff 24%, #cee5ff 30%, #e8f0ff 31%, #e8f0ff 43%, #cee5ff 44%, #cee5ff 50%, #e8f0ff 51%, transparent 51%, transparent),
+    radial-gradient(circle at 100% 50%, #cee5ff 5%, #e8f0ff 6%, #e8f0ff 15%, #cee5ff 16%, #cee5ff 20%, #e8f0ff 21%, #e8f0ff 30%, #cee5ff 31%, #cee5ff 35%, #e8f0ff 36%, transparent 36%, transparent),
+    radial-gradient(circle at 0 50%, #cee5ff 5%, #e8f0ff 6%, #e8f0ff 15%, #cee5ff 16%, #cee5ff 20%, #e8f0ff 21%, #e8f0ff 30%, #cee5ff 31%, #cee5ff 35%, #e8f0ff 36%, transparent 36%, transparent);
+  background-size: 100px 50px;
+}
+
+/* Card Layout */
+.cards-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 0 1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+}
+
+.content-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+/* Card without hover effects for contact form */
+.content-card.static-card {
+  transition: none;
+}
+
+.content-card.static-card:hover {
+  transform: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: auto;
 }
 
 /****************   Nav Section **********************/
@@ -64,7 +108,11 @@ body {
   background-color: #1a4b8c;
   text-align: center;
   padding: 3rem 1rem;
-  max-height: 300px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .site-header h1 {
@@ -72,6 +120,28 @@ body {
   font-size: 2.5rem;
   color: #ffffff;
   margin: 0;
+}
+
+.site-header .contact-info {
+  color: #ffffff;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.site-header .contact-info a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-header .contact-info a:hover {
+  color: #cee5ff;
+  text-decoration: underline;
+}
+
+.site-header .contact-sep {
+  margin: 0 0.5rem;
+  color: #96c5fa;
 }
 
 .site-header img {
@@ -86,7 +156,7 @@ body {
   display: flex;
   justify-content: center;
   font-style: italic;
-  color: #555;
+  color: #fbfbfb;
   margin-top: 1rem;
 }
 
@@ -96,7 +166,7 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   margin-top: 0.5rem;
-  color: #444;
+  color: #f0f0f0;
 }
 
 /************* Sections ********************/
@@ -140,6 +210,7 @@ section a:hover {
 
 section h4 {
   font-size: larger;
+  font-weight: normal;
   text-decoration: underline;
 }
 
@@ -183,6 +254,27 @@ section h4 {
     grid-template-columns: 1fr;
     justify-items: center;
   }
+
+  .site-header {
+    padding: 2rem 1rem;
+    min-height: fit-content;
+  }
+
+  .site-header .contact-info {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .site-header .contact-sep {
+    display: none;
+  }
+
+  .site-header .contact-line-item {
+    display: block;
+    margin: 0.25rem 0;
+  }
 }
 
 /**************   Contact Page   *****************/
@@ -225,20 +317,24 @@ input:focus, textarea:focus {
 }
 
 .contact-address {
-  color: #fff;
+  color: #0f0a0a;
   font-style: italic;
+  text-align: center;
+  margin: 1.5rem 0;
 }
 
 .contact-tagline {
-  color: white;
+  color: rgb(8, 8, 8);
   font-size: larger;
   font-weight: 700;
 }
 
 .contact-heading {
-  margin-left: 2rem;
   text-decoration: underline;
   color: #005fa3;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.8rem;
 }
 
 .sr-only {

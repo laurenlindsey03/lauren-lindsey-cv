@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import resumeData from "../resume.json";
@@ -10,61 +7,45 @@ const resume = resumeData as Resume;
 
 export default function ContactPage(): JSX.Element {
   const { contact } = resume;
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    // For this demo just clear the form and show a simple message.
-    // In a real site you'd send this to an API or form service.
-    setName("");
-    setEmail("");
-    setMessage("");
-    alert("Thanks — your message was submitted (demo)");
-  }
 
   return (
     <main>
       <Nav name={resume.name} context="contact" />
 
-      <section className="contact-page">
-        <h1 className="contact-heading">Contact</h1>
+      <div className="cards-container">
+        <section className="content-card static-card contact-page">
+          <h1 className="contact-heading">Contact</h1>
 
-        <div className="contact-address">
-          <p>{contact.address}</p>
-          <p>
-            <a href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}>{contact.phone}</a>
+          <p className="contact-address">
+            <span className="contact-line-item">{contact.address}</span>
+            <span className="contact-sep"> • </span>
+            <span className="contact-line-item">
+              <a href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}>{contact.phone}</a>
+            </span>
+            <span className="contact-sep"> • </span>
+            <span className="contact-line-item">
+              <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            </span>
           </p>
-          <p>
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          </p>
-          {contact.linkedin ? (
-            <p>
-              <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </p>
-          ) : null}
-        </div>
 
-  <form className="contact-form" onSubmit={handleSubmit} method="POST" action={`https://formsubmit.co/${contact.email}`}>
-          <label>
-            Name
-            <input value={name} onChange={(e) => setName(e.target.value)} required />
-          </label>
+          <form
+          className="one-col contact-form"
+          action="https://formsubmit.co/send/lrl64600@uga.edu"
+          method="POST"
+        >
+          <label htmlFor="name">Name:</label>
+          <input id="name" type="text" name="name" placeholder="name" required />
 
-          <label>
-            Email
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </label>
+          <label htmlFor="email">Email:</label>
+          <input id="email" type="email" name="email" placeholder="email address" required />
 
-          <label>
-            Message
-            <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows={6} required />
-          </label>
+          <label htmlFor="message">Message:</label>
+          <textarea id="message" name="message" rows={5} cols={30}></textarea>
 
           <button type="submit">Send</button>
         </form>
       </section>
+      </div>
 
       <Footer />
     </main>

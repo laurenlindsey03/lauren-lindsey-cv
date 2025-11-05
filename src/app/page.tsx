@@ -19,26 +19,28 @@ export default function Home() {
     <main>
       <Nav name={name} context="home" />
       <Header />
+      
+      <div className="cards-container">
+        <Section title="Education">
+          <EducationList />
+        </Section>
 
-      <Section title="Education">
-        <EducationList />
-      </Section>
+        <Section title="Honors">
+          <Honors />
+        </Section>
 
-      <Section title="Honors">
-        <Honors />
-      </Section>
+        <Section title="Skills">
+          <Skills />
+        </Section>
 
-      <Section title="Skills">
-        <Skills />
-      </Section>
+        <Section title="Leadership and Experience">
+          <Experience />
+        </Section>
 
-      <Section title="Leadership and Experience">
-        <Experience />
-      </Section>
-
-      <Section title="Projects">
-        <Projects />
-      </Section>
+        <Section title="Projects">
+          <Projects />
+        </Section>
+      </div>
 
       <Footer />
     </main>
