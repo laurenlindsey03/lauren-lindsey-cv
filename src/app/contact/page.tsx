@@ -34,7 +34,7 @@ export default function ContactPage() {
           method="POST"
         >
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="http://localhost:3000/thank-you" />
+          <input type="hidden" name="_next" value="https://lauren-lindsey-cv.vercel.app/thank-you" />
           <input type="hidden" name="_subject" value="New contact form submission!" />
           
           <label htmlFor="name">Name:</label>
