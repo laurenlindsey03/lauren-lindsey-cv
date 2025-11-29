@@ -5,7 +5,7 @@ import type { Resume } from "../../../types/resume";
 
 const resume = resumeData as Resume;
 
-export default function ContactPage(): JSX.Element {
+export default function ContactPage() {
   const { contact } = resume;
 
   return (

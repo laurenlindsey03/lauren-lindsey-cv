@@ -4,7 +4,7 @@ import resumeJson from "@/app/resume.json";
 
 const resume = resumeJson as unknown as Resume;
 
-export default function Projects(): JSX.Element {
+export default function Projects() {
   const projects: Project[] = resume.projects || [];
 
   return (

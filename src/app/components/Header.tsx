@@ -4,7 +4,7 @@ import resumeJson from "@/app/resume.json";
 
 const resume = resumeJson as unknown as Resume;
 
-export default function Header(): JSX.Element {
+export default function Header() {
   const contact: Contact = resume.contact;
 
   return (

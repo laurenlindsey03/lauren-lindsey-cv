@@ -4,7 +4,7 @@ import resumeJson from "@/app/resume.json";
 
 const resume = resumeJson as unknown as Resume;
 
-export default function Experience(): JSX.Element {
+export default function Experience() {
   const experience: ExperienceItem[] = resume.leadership_and_experience;
 
   return (

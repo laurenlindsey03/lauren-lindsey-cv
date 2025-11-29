@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Project } from "../../../types/resume";
 
-export default function ProjectItem({ project }: { project: Project }): JSX.Element {
+export default function ProjectItem({ project }: { project: Project }) {
         return(
             <article className="project-item">
                 <h3>{project.title}</h3>

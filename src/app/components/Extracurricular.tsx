@@ -3,7 +3,7 @@ import resumeJson from "@/app/resume.json";
 
 const resume = resumeJson as unknown as Resume;
 
-export default function Extracurricular(): JSX.Element {
+export default function Extracurricular() {
   const activities: ExtracurricularActivity[] = resume.extracurricular_activities;
 
   return (

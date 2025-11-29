@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 type NavProps = { name?: string; context?: "home" | "contact" };
 
-export default function Nav({ name, context }: NavProps): JSX.Element {
+export default function Nav({ name, context }: NavProps) {
     const pathname = usePathname();
     const ctx = context ?? (pathname?.startsWith("/contact") ? "contact" : "home");
 

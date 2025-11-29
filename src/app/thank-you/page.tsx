@@ -3,11 +3,10 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import resumeData from "../resume.json";
 import type { Resume } from "../../../types/resume";
-import { JSX } from "react";
 
 const resume = resumeData as Resume;
 
-export default function ThankYouPage(): JSX.Element {
+export default function ThankYouPage() {
   return (
     <main>
       <Nav name={resume.name} context="contact" />

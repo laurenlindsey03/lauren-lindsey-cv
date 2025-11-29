@@ -3,7 +3,7 @@ import resumeJson from "@/app/resume.json";
 
 const resume = resumeJson as unknown as Resume;
 
-export default function EducationList(): JSX.Element {
+export default function EducationList() {
   const education: Education = resume.education;
 
   return (

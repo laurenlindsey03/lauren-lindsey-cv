@@ -3,7 +3,7 @@ import resumeJson from "@/app/resume.json";
 
 const resume = resumeJson as unknown as Resume;
 
-export default function Honors(): JSX.Element {
+export default function Honors() {
   const honors: Honor[] = resume.honors_and_awards || [];
 
   return (
