@@ -29,6 +29,11 @@ export type Contact = {
   linkedin: string;
 };
 
+export type ExtracurricularActivity = {
+  activity: string;
+  date: string;
+};
+
 export type Resume = {
   name: string;
   tagline: string;
@@ -39,4 +44,5 @@ export type Resume = {
   skills: string[];
   leadership_and_experience: ExperienceItem[];
   projects: Project[];
+  extracurricular_activities: ExtracurricularActivity[];
 };

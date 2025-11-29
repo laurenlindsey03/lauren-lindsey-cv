@@ -30,9 +30,13 @@ export default function ContactPage(): JSX.Element {
 
           <form
           className="one-col contact-form"
-          action="https://formsubmit.co/send/lrl64600@uga.edu"
+          action="https://formsubmit.co/b53025360f1046feedf323dee640c5c7"
           method="POST"
         >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="http://localhost:3000/thank-you" />
+          <input type="hidden" name="_subject" value="New contact form submission!" />
+          
           <label htmlFor="name">Name:</label>
           <input id="name" type="text" name="name" placeholder="name" required />
 

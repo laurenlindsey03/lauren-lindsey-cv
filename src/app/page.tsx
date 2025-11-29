@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Extracurricular from "./components/Extracurricular";
 
 const resume = resumeData as Resume;
 
@@ -39,6 +40,10 @@ export default function Home() {
 
         <Section title="Projects">
           <Projects />
+        </Section>
+
+        <Section title="Extracurricular Activities">
+          <Extracurricular />
         </Section>
       </div>
 
